@@ -1,0 +1,29 @@
+<h1>Listing reservs</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Room</th>
+    <th>Checkin</th>
+    <th>Checkout</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @reservs.each do |reserv| %>
+  <tr>
+    <td><%= reserv.user %></td>
+    <td><%= reserv.room %></td>
+    <td><%= reserv.checkin %></td>
+    <td><%= reserv.checkout %></td>
+    <td><%= link_to 'Show', reserv %></td>
+    <td><%= link_to 'Edit', edit_reserv_path(reserv) %></td>
+    <td><%= link_to 'Destroy', reserv, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Reserv', new_reserv_path %>

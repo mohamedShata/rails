@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  user: 
+  room: 
+  checkin: 2014-05-18 16:54:22
+  checkout: 2014-05-18 16:54:22
+
+two:
+  user: 
+  room: 
+  checkin: 2014-05-18 16:54:22
+  checkout: 2014-05-18 16:54:22

@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>User:</b>
+  <%= @reserv.user %>
+</p>
+
+<p>
+  <b>Room:</b>
+  <%= @reserv.room %>
+</p>
+
+<p>
+  <b>Checkin:</b>
+  <%= @reserv.checkin %>
+</p>
+
+<p>
+  <b>Checkout:</b>
+  <%= @reserv.checkout %>
+</p>
+
+
+<%= link_to 'Edit', edit_reserv_path(@reserv) %> |
+<%= link_to 'Back', reservs_path %>

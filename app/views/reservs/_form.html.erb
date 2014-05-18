@@ -1,0 +1,33 @@
+<%= form_for(@reserv) do |f| %>
+  <% if @reserv.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@reserv.errors.count, "error") %> prohibited this reserv from being saved:</h2>
+
+      <ul>
+      <% @reserv.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :user %><br />
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :room %><br />
+    <%= f.text_field :room %>
+  </div>
+  <div class="field">
+    <%= f.label :checkin %><br />
+    <%= f.datetime_select :checkin %>
+  </div>
+  <div class="field">
+    <%= f.label :checkout %><br />
+    <%= f.datetime_select :checkout %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

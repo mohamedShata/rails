@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
 */
+
+div.field, div.actions {
+margin-bottom: 10px;
+}

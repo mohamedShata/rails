@@ -44,10 +44,11 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to @user
+      redirect_to ('/signin')
+     # render 'sessions/new'
     else
       @title = "Sign up"
-      render 'new'
+      render '/signup'
     end
   end
 

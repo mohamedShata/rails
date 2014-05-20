@@ -12,16 +12,16 @@ Booking::Application.routes.draw do
 
   resources :hotels
 
-  resources :login do 
+  resources :sessions do 
     collection do
-      post "login_attempt"
+      post "create"
     end
   end
   
-  resources :sessions, :only =>[:new, :create, :destroy]
-  match '/signin',  :to => 'sessions#new'
-  match '/signout',   :to => 'sessions#destroy'
-  match '/signup',  :to=>'users#new'
+ resources :sessions, :only =>[:new, :create, :destroy]
+ match '/signin',  :to => 'sessions#new'
+ match '/signout',   :to => 'sessions#destroy'
+ match '/signup',  :to=>'users#new'
 
 
   # The priority is based upon order of creation:

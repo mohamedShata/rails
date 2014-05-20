@@ -3,7 +3,6 @@ class HotelsController < ApplicationController
   # GET /hotels.json
   def index
     @hotels = Hotel.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @hotels }

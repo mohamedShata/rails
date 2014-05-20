@@ -8,7 +8,7 @@ after_save :clear_password
 
 	has_many :reserv
 	validates :encrypted_password, confirmation: true, length: { maximum: 16 }
-	#validates :password_confirmation, presence: true
+	#validates :password_confirmation, presence: truewrite
 	validates :email, uniqueness: { case_sensitive: true }, email_format: { message: "dosn't look like an email address" }
 
 	def self.authenticate(email="",login_password="")   	      

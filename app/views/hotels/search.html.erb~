@@ -1,0 +1,23 @@
+<%= form_tag({controller: "room", action: "rooms"}, method: "get") do %>
+	<div>
+		<%= label_tag(:hotelName, "Hotel Name:") %>
+		<%= text_field_tag(:hotelName) %>
+	</div>
+	<div>
+		<%= label_tag(:country, "country") %>
+		<%= text_field_tag(:country) %>
+	</div>
+	<div>
+		<%= label_tag(:city, "city") %>
+		<%= text_field_tag(:city) %>
+	</div>
+	<div>
+		<%= label_tag(:checkin, "check-in") %>
+		<%= date_select("checkin",:start) %>
+	<div/>
+	<div>
+		<%= label_tag(:checkout, "check-out") %>
+		<%= date_select("checkout",:start) %>
+	</div>
+	<%= submit_tag("Search") %>
+<% end %>

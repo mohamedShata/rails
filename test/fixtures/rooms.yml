@@ -2,14 +2,16 @@
 
 one:
   title: MyString
-  number: 1
+  number: MyString
   img: MyString
   capacity: 1
   hotel: 
+  price: 1.5
 
 two:
   title: MyString
-  number: 1
+  number: MyString
   img: MyString
   capacity: 1
   hotel: 
+  price: 1.5

@@ -1,16 +1,28 @@
 Booking::Application.routes.draw do
-  
   resources :rates
 
   resources :comments
 
-  resources :reservs
+  resources :reservs do
+		collection do
+			post 'reserv'
+		end
+	end
 
   resources :users
 
-  resources :rooms
+  resources :rooms do
+		collection do
+			post 'rooms'
+		end
+	end
 
-  resources :hotels
+  resources :hotels do
+		collection do
+			get 'search'
+		end
+	end
+
 
   resources :sessions do 
     collection do

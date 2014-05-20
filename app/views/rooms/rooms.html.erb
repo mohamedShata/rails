@@ -1,0 +1,32 @@
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Number</th>
+    <th>Img</th>
+    <th>Capacity</th>
+    <th>Hotel</th>
+    <th></th>
+  </tr>
+
+<% if @rooms.length > 0 %>
+	<% @rooms.each do |room| %>
+	  <tr>
+		<td><%= room.title %></td>
+		<td><%= room.number %></td>
+		<td><%= room.img %></td>
+		<td><%= room.capacity %></td>
+		<td><%= room.hotel %></td>
+		<td>
+			<%= form_tag({controller: "reservs", action: "reserv"}, method: "post") do %>
+				<%= hidden_field_tag("roomid",room.id) %>
+				<%= submit_tag("Reserv") %>
+			<% end %>
+		</td>
+	  </tr>
+	<% end %>
+<% end %>
+</table>
+
+<br />
+

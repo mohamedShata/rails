@@ -80,4 +80,12 @@ class HotelsController < ApplicationController
       format.json { head :no_content }
     end
   end
+	@country = Hotel.getCountries
+	def search
+		respond_to do |format|
+      format.html # search.html.erb
+      format.json { render json: @country }
+    end
+	end
+
 end

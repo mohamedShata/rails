@@ -1,16 +1,29 @@
 Booking::Application.routes.draw do
+  resources :rooms
+
   resources :rates
 
   resources :comments
 
-  resources :reservs
+  resources :reservs do
+		collection do
+			post 'reserv'
+		end
+	end
 
   resources :users
 
-  resources :rooms
+  resources :rooms do
+		collection do
+			post 'rooms'
+		end
+	end
 
-  resources :hotels
-
+  resources :hotels do
+		collection do
+			get 'search'
+		end
+	end
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

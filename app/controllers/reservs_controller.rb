@@ -80,4 +80,23 @@ class ReservsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+	def reserv
+
+		data={"user_id"=>1,
+			"room_id"=>params[:roomid],
+			"checkin"=>$checkin,
+			"checkout"=>$checkout
+		}
+
+	  @reserv = Reserv.new(data)
+
+		respond_to do |format|
+      if @reserv.save
+        format.html { render json: @reserv, notice: 'Reserv was successfully.' }
+      else
+				format.json { render json: @reserv.errors, status: :unprocessable_entity }
+      end
+    end
+	end
 end

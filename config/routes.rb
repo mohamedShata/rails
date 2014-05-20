@@ -1,6 +1,4 @@
 Booking::Application.routes.draw do
-  resources :rooms
-
   resources :rates
 
   resources :comments
@@ -24,6 +22,20 @@ Booking::Application.routes.draw do
 			get 'search'
 		end
 	end
+
+  
+  resources :login do 
+    collection do
+      post "login_attempt"
+    end
+  end
+  
+  resources :sessions, :only =>[:new, :create, :destroy]
+  match '/signin',  :to => 'sessions#new'
+  match '/signout',   :to => 'sessions#destroy'
+  match '/signup',  :to=>'users#new'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

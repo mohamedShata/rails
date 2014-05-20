@@ -11,7 +11,11 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20140520095519) do
+=======
+ActiveRecord::Schema.define(:version => 20140519123140) do
+>>>>>>> 73ab6968aa5ed4ac1ff5ff634dcb7cea32d5eeef
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"

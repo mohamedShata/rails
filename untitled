@@ -1,12 +1,12 @@
 class LoginController < ApplicationController
-  
-  def index
-  	respond_to do |format|
+	
+def index
+    respond_to do |format|
       format.html # index.html.erb
     end
-  end
+end
 
-  def login_attempt
+def login_attempt
     authorized_user = User.authenticate(params[:email],params[:password])
     if authorized_user
       flash[:notice] = "Wow Welcome again, you logged in as #{authorized_user.username}"
@@ -17,5 +17,15 @@ class LoginController < ApplicationController
       render "login"	
     end
   end
-  
+
 end
+
+
+<div class= "Sign_Form">
+  <h1>Log in</h1>
+  <%= form_tag(:action => 'login_attempt', :controller=>"login") do %>
+    <p>Username or Email:</br> <%= text_field_tag(:email) %></p> 
+    <p>Password:</br> <%= password_field_tag :password %></p> 
+    <%= submit_tag("Log In") %>
+  <% end %>
+</div>

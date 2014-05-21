@@ -8,8 +8,9 @@ class SessionsController < ApplicationController
     logger.debug(user)
     logger.debug("||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||")
   	if user
-      session[:userName]=user
-      redirect_to comments_url(@comment) 	
+      session[:userName]= user
+      #redirect_to comments_url(@comment) 
+      redirect_to ('/hotels/search')
   	else
       flash.now[:error] ="invalid email or password"
       @title="sign in"

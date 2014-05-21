@@ -1,7 +1,12 @@
 Booking::Application.routes.draw do
   resources :rates
 
-  resources :comments
+  resources :comments do
+     collection do
+      post 'create'
+      post 'createComment'
+     end
+  end
 
   resources :reservs do
 		collection do

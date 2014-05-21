@@ -12,10 +12,10 @@ development:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rails_booking
+  database: booking
   pool: 5
   username: root
-  password: mysql
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -25,18 +25,18 @@ test:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rails_booking
+  database: booking
   pool: 5
   username: root
-  password: mysql
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock
 
 production:
   adapter: mysql2
   encoding: utf8
   reconnect: false
-  database: rails_booking
+  database: booking
   pool: 5
   username: root
-  password: mysql
+  password: 123456
   socket: /var/run/mysqld/mysqld.sock

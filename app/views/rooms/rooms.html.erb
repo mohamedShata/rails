@@ -29,4 +29,9 @@
 </table>
 
 <br />
+<%= form_tag({controller: "comments", action: "new"}, method: "get") do %>
+	<%= hidden_field_tag("hotel_id",@rooms[0].hotel_id) %>
+	<%= submit_tag("comments") %>
+<% end %>
+
 
